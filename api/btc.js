@@ -17,5 +17,5 @@ const ping_btc = () => {
 }
 
 module.exports = {
-    ping_btc
+  ping_btc
 }
