@@ -33,7 +33,7 @@ const ping_lnd = () => {
     return new Promise( (resolve, reject) => {
         client.getInfo({}, (err, response) => {
             if (err) {
-                reject(errr)
+                reject(err)
             } else {
                 resolve(response)
             }
