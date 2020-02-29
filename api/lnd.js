@@ -17,7 +17,7 @@ process.env.GRPC_SSL_CIPHER_SUITES = 'HIGH+ECDSA'
 
 //  Lnd cert is at ~/.lnd/tls.cert on Linux and
 //  ~/Library/Application Support/Lnd/tls.cert on Mac
-const lndCert = fs.readFileSync("/home/zackmcginnis/.lnd/tls.cert");
+const lndCert = fs.readFileSync(`${process.env.HOME}/.lnd/tls.cert`);
 const credentials = grpc.credentials.createSsl(lndCert);
 const protoLoader = require("@grpc/proto-loader");
 const packageDefinition = protoLoader.loadSync('rpc.proto');
